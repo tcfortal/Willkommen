@@ -79,7 +79,6 @@ export default function PaginaInicial() {
                         //forma de submeter o formulario em fazer refresh
                         onSubmit={function(infosDoEvento){
                             infosDoEvento.preventDefault();
-                            console.log('alguém submeteu o form');
                             roteamento.push('/chat');
 
                         }}
@@ -111,7 +110,7 @@ export default function PaginaInicial() {
                         /> */}
                            
                         <TextField
-                        value={username}
+                         value={username}
                         onChange={function (event){
                             const valor = event.target.value;
                             setUsername(valor);
