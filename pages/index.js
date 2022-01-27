@@ -110,10 +110,10 @@ export default function PaginaInicial() {
                         /> */}
                            
                         <TextField
-                         value={username}
+                         value={"ENVIE SUA MENSAGEM"}
                         onChange={function (event){
                             const valor = event.target.value;
-                            setUsername(valor);
+                            
 
 
                         }}
@@ -129,7 +129,7 @@ export default function PaginaInicial() {
                         />
                         <Button
                             type='submit'
-                            label='jetzt anmelden'
+                            label='ENVIAR'
                             fullWidth
                             buttonColors={{
                                 contrastColor: appConfig.theme.colors.neutrals["000"],
