@@ -43,8 +43,8 @@ const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
                     boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
                     borderRadius: '5px',
                     backgroundColor: appConfig.theme.colors.neutrals[700],
-                    height: '70%',
-                    maxWidth: '65%',
+                    height: '60%',
+                    maxWidth: '75%',
                     maxHeight: '95vh',
                     padding: '32px',
                 }}
