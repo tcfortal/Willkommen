@@ -44,7 +44,7 @@ const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
                     borderRadius: '5px',
                     backgroundColor: appConfig.theme.colors.neutrals[700],
                     height: '70%',
-                    maxWidth: '45%',
+                    maxWidth: '65%',
                     maxHeight: '95vh',
                     padding: '32px',
                 }}
@@ -118,7 +118,7 @@ function Header() {
         <>
             <Box styleSheet={{ width: '100%', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
                 <Text variant='heading5'>
-                    Chat
+                    Chat com Thiago:
                 </Text>
                 <Button
                     variant='tertiary'
