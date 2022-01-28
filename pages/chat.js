@@ -92,8 +92,113 @@ export default function ChatPage() {
                           )
                       })} */}
             <Box
+<<<<<<< HEAD
               as="form"
               styleSheet={{
+=======
+                styleSheet={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flex: 1,
+                    boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
+                    borderRadius: '5px',
+                    backgroundColor: appConfig.theme.colors.neutrals[700],
+                    height: '60%',
+                    maxWidth: '75%',
+                    maxHeight: '95vh',
+                    padding: '32px',
+                }}
+            >
+                <Header />
+                <Box
+                    styleSheet={{
+                        position: 'relative',
+                        display: 'flex',
+                        flex: 1,
+                        height: '80%',
+                        backgroundColor: appConfig.theme.colors.neutrals[600],
+                        flexDirection: 'column',
+                        borderRadius: '5px',
+                        padding: '16px',
+                    }}
+                >
+
+                    {/* <MessageList mensagens={[]} /> */}
+                     {listaDeMensagens.map((mensagemAtual)=>{
+                    return(
+                        <li key={mensagemAtual.id}>
+                            {mensagemAtual.de}: {mensagemAtual.texto}
+                        </li>
+                    )
+                     })}
+
+                    <Box
+                        as="form"
+                        styleSheet={{
+                            display: 'flex-end',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <TextField
+                        value={mensagem}
+                        onChange={(event) => {
+                            const valor = event.target.value;
+                            setMensagem(valor);
+                        }}
+
+                            onKeyPress={(event) =>{
+                                if(event.key === 'Enter'){
+                                    event.preventDefault();
+                                handleNovaMensagem(mensagem);
+                                }
+
+                            }}
+                            placeholder="Insira sua mensagem aqui..."
+                            type="textarea"
+                            styleSheet={{
+                                width: '100%',
+                                border: '0',
+                                resize: 'none',
+                                borderRadius: '5px',
+                                padding: '6px 8px',
+                                backgroundColor: appConfig.theme.colors.neutrals[800],
+                                marginRight: '12px',
+                                color: appConfig.theme.colors.neutrals[200],
+                            }}
+                        />
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    )
+}
+
+function Header() {
+    return (
+        <>
+            <Box styleSheet={{ width: '100%', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+                <Text variant='heading5'>
+                    Chat com Thiago:
+                </Text>
+                <Button
+                    variant='tertiary'
+                    colorVariant='neutral'
+                    label='Logout'
+                    href="/"
+                />
+            </Box>
+        </>
+    )
+}
+
+function MessageList(props) {
+    console.log('MessageList', props);
+    return (
+        <Box
+            tag="ul"
+            styleSheet={{
+                overflow: 'scroll',
+>>>>>>> b44144f78e1a1c6fedfa1833a0f99a9dd8d08b2e
                 display: 'flex',
                 alignItems: 'center',
               }}
@@ -128,6 +233,7 @@ export default function ChatPage() {
         </Box>
       </Box>
     )
+<<<<<<< HEAD
   }
   
   function Header() {
@@ -212,3 +318,6 @@ export default function ChatPage() {
       </Box>
     )
   }
+=======
+}
+>>>>>>> b44144f78e1a1c6fedfa1833a0f99a9dd8d08b2e
